@@ -98,6 +98,12 @@ cp -r i18n-anything/skills/i18n-anything ~/.claude/skills/     # Claude Code
 
 ## 试试演示
 
+在线版：[阿拉伯语](https://du8866-nice.github.io/i18n-anything/examples/shop/?lang=ar) ·
+[俄语](https://du8866-nice.github.io/i18n-anything/examples/shop/?lang=ru) ·
+[中文](https://du8866-nice.github.io/i18n-anything/examples/shop/?lang=zh-CN) ·
+[伪本地化 + 高亮](https://du8866-nice.github.io/i18n-anything/examples/shop/?lang=en-XA&missed=1&highlight=1)。
+也可以在本地运行：
+
 ```bash
 python3 -m http.server 8000      # 在仓库根目录运行
 ```

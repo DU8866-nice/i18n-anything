@@ -111,6 +111,12 @@ needs, like French `many` (warnings), and forms only decimals need, like Russian
 
 ## Try the demo
 
+Live: [Arabic](https://du8866-nice.github.io/i18n-anything/examples/shop/?lang=ar) ·
+[Russian](https://du8866-nice.github.io/i18n-anything/examples/shop/?lang=ru) ·
+[Japanese](https://du8866-nice.github.io/i18n-anything/examples/shop/?lang=ja) ·
+[pseudo-locale with the highlighter](https://du8866-nice.github.io/i18n-anything/examples/shop/?lang=en-XA&missed=1&highlight=1).
+Or locally:
+
 ```bash
 python3 -m http.server 8000      # from the repo root
 ```
