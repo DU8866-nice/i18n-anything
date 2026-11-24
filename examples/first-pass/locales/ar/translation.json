@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "shop": "المتجر",
+    "orders": "الطلبات",
+    "help": "المساعدة"
+  },
+  "greeting": "مرحبًا بعودتك يا {{name}}",
+  "cart": {
+    "title": "سلة التسوق",
+    "items_one": "منتج واحد",
+    "items_other": "{{count}} منتج",
+    "qty": "الكمية",
+    "remove": "إزالة"
+  },
+  "product": {
+    "mug": "كوب خزفي",
+    "tote": "حقيبة كتان",
+    "notebook": "دفتر منقط"
+  },
+  "summary": {
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "free": "مجاني",
+    "total": "الإجمالي",
+    "arrives_zero": "يصل اليوم",
+    "arrives_one": "يصل خلال يوم واحد",
+    "arrives_two": "يصل خلال يومين",
+    "arrives_few": "يصل خلال {{count}} أيام",
+    "arrives_many": "يصل خلال {{count}} يومًا",
+    "arrives_other": "يصل خلال {{count}} يوم"
+  },
+  "promo": {
+    "placeholder": "رمز الخصم",
+    "apply": "تطبيق"
+  },
+  "checkout": "إتمام الشراء",
+  "footer": "الأسعار تشمل الضريبة. <1>سياسة الإرجاع</1>"
+}

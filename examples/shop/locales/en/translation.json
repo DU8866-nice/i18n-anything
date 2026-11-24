@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "shop": "Shop",
+    "orders": "Orders",
+    "help": "Help"
+  },
+  "greeting": "Welcome back, {{name}}",
+  "cart": {
+    "title": "Your cart",
+    "items_one": "{{count}} item",
+    "items_other": "{{count}} items",
+    "qty": "Qty",
+    "remove": "Remove"
+  },
+  "product": {
+    "mug": "Ceramic mug",
+    "tote": "Linen tote bag",
+    "notebook": "Dot-grid notebook"
+  },
+  "summary": {
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "total": "Total",
+    "arrives_one": "Arrives in {{count}} day",
+    "arrives_other": "Arrives in {{count}} days"
+  },
+  "promo": {
+    "placeholder": "Promo code",
+    "apply": "Apply"
+  },
+  "checkout": "Check out",
+  "footer": "Prices include tax. <1>Return policy</1>"
+}

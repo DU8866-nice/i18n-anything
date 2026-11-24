@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">С возвращением, %s</string>
+    <string name="terms">Прочитайте условия</string>
+    <plurals name="items">
+        <item quantity="one">%d товар</item>
+        <item quantity="other">%d товаров</item>
+    </plurals>
+    <string-array name="sizes">
+        <item>Маленький</item>
+        <item>Большой</item>
+    </string-array>
+</resources>

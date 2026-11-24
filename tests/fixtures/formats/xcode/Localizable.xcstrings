@@ -1,0 +1,11 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Delete" : { "localizations" : { "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer" } } } },
+    "Share" : { },
+    "%lld photos" : { "localizations" : {
+        "en" : { "variations" : { "plural" : { "one" : { "stringUnit" : { "value" : "%lld photo" } }, "other" : { "stringUnit" : { "value" : "%lld photos" } } } } },
+        "fr" : { "variations" : { "plural" : { "one" : { "stringUnit" : { "value" : "%lld photo" } }, "other" : { "stringUnit" : { "value" : "%lld photos" } } } } } } }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "shop": "Boutique",
+    "orders": "Commandes",
+    "halp": "Aide"
+  },
+  "greeting": "Bon retour, {{name}}",
+  "cart": {
+    "title": "Votre panier",
+    "items_one": "{{count}} article",
+    "items_other": "{{count}} articles",
+    "qty": "Qté",
+    "remove": "Retirer"
+  },
+  "product": {
+    "mug": "Tasse en céramique",
+    "tote": "Sac cabas en lin",
+    "notebook": "Carnet à points"
+  },
+  "summary": {
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "free": "Gratuite",
+    "total": "Total",
+    "arrives_one": "Livré en {{count}} jour",
+    "arrives_other": "Livré en {{count}} jours"
+  },
+  "promo": {
+    "placeholder": "Code promo",
+    "apply": "Appliquer"
+  },
+  "checkout": "Payer",
+  "footer": "Prix TTC. <1>Politique de retour</1>"
+}

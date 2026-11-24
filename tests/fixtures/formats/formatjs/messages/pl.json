@@ -1,0 +1,4 @@
+{
+  "cart.count": "{count, plural, one {# produkt} other {# produktów}}",
+  "cart.title": "Twój koszyk"
+}

@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "shop": "ショップ",
+    "orders": "注文履歴",
+    "help": "ヘルプ"
+  },
+  "greeting": "{{name}}さん、おかえりなさい",
+  "cart": {
+    "title": "カート",
+    "items_other": "{{count}}点の商品",
+    "qty": "数量",
+    "remove": "削除",
+    "items_one": "{{count}}点の商品"
+  },
+  "product": {
+    "mug": "陶器のマグカップ",
+    "tote": "リネンのトートバッグ",
+    "notebook": "ドット方眼ノート"
+  },
+  "summary": {
+    "subtotal": "小計",
+    "shipping": "送料",
+    "free": "無料",
+    "total": "合計",
+    "arrives_other": "{{count}}日でお届け"
+  },
+  "promo": {
+    "placeholder": "クーポンコード",
+    "apply": "適用"
+  },
+  "checkout": "Check out",
+  "footer": "価格は税込です。<1>返品ポリシー</1>"
+}

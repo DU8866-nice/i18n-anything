@@ -1,0 +1,4 @@
+{
+  "extName": {"message": "Lumen Tabs", "description": "name"},
+  "openAll": {"message": "Open $COUNT$ tabs", "placeholders": {"count": {"content": "$1"}}}
+}

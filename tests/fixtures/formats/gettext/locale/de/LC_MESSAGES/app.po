@@ -1,0 +1,20 @@
+msgid ""
+msgstr ""
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, python-format
+msgid "Hello, %(name)s"
+msgstr "Hallo, %(name)s"
+
+#, fuzzy
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Log out"
+msgstr ""
+
+msgid "%(count)d file"
+msgid_plural "%(count)d files"
+msgstr[0] "%(count)d Datei"
+msgstr[1] "%(count)d Dateien"

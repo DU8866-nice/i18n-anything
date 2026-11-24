@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "shop": "Shop",
+    "orders": "Bestellungen",
+    "help": "Hilfe"
+  },
+  "greeting": "Willkommen zurück, {{name}}",
+  "cart": {
+    "title": "Dein Warenkorb",
+    "items_one": "{{count}} Artikel",
+    "items_other": "{{count}} Artikel",
+    "qty": "Menge",
+    "remove": "Entfernen"
+  },
+  "product": {
+    "mug": "Keramikbecher",
+    "tote": "Tragetasche aus Leinen",
+    "notebook": "Notizbuch mit Punktraster"
+  },
+  "summary": {
+    "subtotal": "Zwischensumme",
+    "shipping": "Versand",
+    "free": "Kostenlos",
+    "total": "Gesamt",
+    "arrives_one": "Lieferung in {{count}} Tag",
+    "arrives_other": "Lieferung in {{count}} Tagen"
+  },
+  "promo": {
+    "placeholder": "Gutscheincode",
+    "apply": "Einlösen"
+  },
+  "checkout": "Zur Kasse",
+  "footer": "Preise inkl. MwSt. <1>Rückgaberecht</1>"
+}

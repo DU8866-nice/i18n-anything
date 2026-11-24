@@ -1,0 +1,6 @@
+{
+  "@@locale": "en",
+  "inboxCount": "{count, plural, =0{No messages} one{1 message} other{{count} messages}}",
+  "@inboxCount": {"placeholders": {"count": {"type": "int"}}},
+  "hello": "Hello {name}"
+}

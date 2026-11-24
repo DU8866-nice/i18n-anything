@@ -1,0 +1,12 @@
+msgid ""
+msgstr ""
+"Language: ru\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Hello, %(name)s"
+msgstr "Привет, %(nom)s"
+
+msgid "%(count)d file"
+msgid_plural "%(count)d files"
+msgstr[0] "%(count)d файл"
+msgstr[1] "%(count)d файлов"

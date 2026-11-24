@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 862 750" width="862" height="750" role="img" aria-label="i18n_check output on an agent first-pass translation: 7 errors and 5 warnings, including missing Russian and Arabic plural forms, a dropped placeholder and a renamed placeholder">
+<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono","Noto Sans Mono CJK SC",monospace;font-size:13px;white-space:pre}.n{fill:#c9d1d9}.ev{fill:#8b949e}.cmd{fill:#e6edf3}.x{fill:#ff7b72}.w{fill:#e3b341}.file{fill:#e6edf3;font-weight:700}.sum{fill:#ff7b72;font-weight:700}.code{fill:#8b949e}</style>
+<rect width="862" height="750" rx="10" fill="#0d1117"/>
+<circle cx="24" cy="22" r="6" fill="#ff5f57"/><circle cx="44" cy="22" r="6" fill="#febc2e"/><circle cx="64" cy="22" r="6" fill="#28c840"/>
+<text x="18" y="54" class="cmd" xml:space="preserve">$ python3 scripts/i18n_check.py examples/first-pass</text>
+<text x="18" y="73" class="n" xml:space="preserve">i18n check: 7 catalog file(s), 7 language(s), 1 group(s) under examples/first-pass</text>
+<text x="18" y="111" class="ev" xml:space="preserve">  locale     errors  warnings  file</text>
+<text x="18" y="130" xml:space="preserve"><tspan class="n">  ar              </tspan><tspan class="x">1</tspan>         <tspan class="ev">0</tspan><tspan class="ev">  locales/ar/translation.json</tspan></text>
+<text x="18" y="149" xml:space="preserve"><tspan class="n">  de              </tspan><tspan class="x">2</tspan>         <tspan class="ev">0</tspan><tspan class="ev">  locales/de/translation.json</tspan></text>
+<text x="18" y="168" xml:space="preserve"><tspan class="n">  fr              </tspan><tspan class="x">1</tspan>         <tspan class="w">3</tspan><tspan class="ev">  locales/fr/translation.json</tspan></text>
+<text x="18" y="187" xml:space="preserve"><tspan class="n">  ja              </tspan><tspan class="ev">0</tspan>         <tspan class="w">2</tspan><tspan class="ev">  locales/ja/translation.json</tspan></text>
+<text x="18" y="206" xml:space="preserve"><tspan class="n">  ru              </tspan><tspan class="x">1</tspan>         <tspan class="ev">0</tspan><tspan class="ev">  locales/ru/translation.json</tspan></text>
+<text x="18" y="225" xml:space="preserve"><tspan class="n">  zh-CN           </tspan><tspan class="x">2</tspan>         <tspan class="ev">0</tspan><tspan class="ev">  locales/zh-CN/translation.json</tspan></text>
+<text x="18" y="263" class="file" xml:space="preserve">locales/ar/translation.json  [ar]</text>
+<text x="18" y="282" xml:space="preserve">  <tspan class="x">✗</tspan> <tspan class="cmd">cart.items</tspan>  <tspan class="code">plural:</tspan><tspan class="n"> Arabic needs zero, one, two, few, many, other; missing zero, two, few, many</tspan></text>
+<text x="18" y="320" class="file" xml:space="preserve">locales/de/translation.json  [de]</text>
+<text x="18" y="339" xml:space="preserve">  <tspan class="x">✗</tspan> <tspan class="cmd">footer</tspan>  <tspan class="code">markup:</tspan><tspan class="n"> markup dropped: &lt;/1&gt;, &lt;1&gt;</tspan></text>
+<text x="18" y="358" xml:space="preserve">  <tspan class="x">✗</tspan> <tspan class="cmd">greeting</tspan>  <tspan class="code">placeholder:</tspan><tspan class="n"> placeholder dropped: {{name}}</tspan></text>
+<text x="18" y="396" class="file" xml:space="preserve">locales/fr/translation.json  [fr]</text>
+<text x="18" y="415" xml:space="preserve">  <tspan class="x">✗</tspan> <tspan class="cmd">nav.help</tspan>  <tspan class="code">missing:</tspan><tspan class="n"> not translated: Help</tspan></text>
+<text x="18" y="434" xml:space="preserve">  <tspan class="w">!</tspan> <tspan class="cmd">cart.items</tspan>  <tspan class="code">plural-large:</tspan><tspan class="n"> French needs &#x27;many&#x27; for counts of 1,000,000 and up</tspan></text>
+<text x="18" y="453" xml:space="preserve">  <tspan class="w">!</tspan> <tspan class="cmd">nav.halp</tspan>  <tspan class="code">extra:</tspan><tspan class="n"> not in the source; stale or misspelled key</tspan></text>
+<text x="18" y="472" xml:space="preserve">  <tspan class="w">!</tspan> <tspan class="cmd">summary.arrives</tspan>  <tspan class="code">plural-large:</tspan><tspan class="n"> French needs &#x27;many&#x27; for counts of 1,000,000 and up</tspan></text>
+<text x="18" y="510" class="file" xml:space="preserve">locales/ja/translation.json  [ja]</text>
+<text x="18" y="529" xml:space="preserve">  <tspan class="w">!</tspan> <tspan class="cmd">cart.items</tspan>  <tspan class="code">plural-unused:</tspan><tspan class="n"> Japanese never uses one; those forms are dead text</tspan></text>
+<text x="18" y="548" xml:space="preserve">  <tspan class="w">!</tspan> <tspan class="cmd">checkout</tspan>  <tspan class="code">untranslated:</tspan><tspan class="n"> same as the source: Check out</tspan></text>
+<text x="18" y="586" class="file" xml:space="preserve">locales/ru/translation.json  [ru]</text>
+<text x="18" y="605" xml:space="preserve">  <tspan class="x">✗</tspan> <tspan class="cmd">cart.items</tspan>  <tspan class="code">plural:</tspan><tspan class="n"> Russian needs one, few, many; missing few, many</tspan></text>
+<text x="18" y="643" class="file" xml:space="preserve">locales/zh-CN/translation.json  [zh-CN]</text>
+<text x="18" y="662" xml:space="preserve">  <tspan class="x">✗</tspan> <tspan class="cmd">greeting</tspan>  <tspan class="code">placeholder:</tspan><tspan class="n"> placeholder changed: {{name}} became {{名字}}; keep it exactly as in the source</tspan></text>
+<text x="18" y="681" xml:space="preserve">  <tspan class="x">✗</tspan> <tspan class="cmd">promo.apply</tspan>  <tspan class="code">missing:</tspan><tspan class="n"> not translated: Apply</tspan></text>
+<text x="18" y="719" class="sum" xml:space="preserve">7 error(s), 5 warning(s)</text>
+</svg>

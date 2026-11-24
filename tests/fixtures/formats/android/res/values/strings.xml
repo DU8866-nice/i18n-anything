@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Lumen</string>
+    <string name="welcome">Welcome back, %1$s</string>
+    <string name="terms">Read the <b>terms</b></string>
+    <plurals name="items">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+    <string-array name="sizes">
+        <item>Small</item>
+        <item>Large</item>
+    </string-array>
+</resources>

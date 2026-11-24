@@ -1,0 +1,5 @@
+{
+  "@@locale": "pl",
+  "inboxCount": "{count, plural, =0{Brak wiadomości} one{1 wiadomość} other{{count} wiadomości}}",
+  "hello": "Cześć {name}"
+}

@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "shop": "商店",
+    "orders": "订单",
+    "help": "帮助"
+  },
+  "greeting": "欢迎回来，{{名字}}",
+  "cart": {
+    "title": "购物车",
+    "items_other": "{{count}} 件商品",
+    "qty": "数量",
+    "remove": "删除"
+  },
+  "product": {
+    "mug": "陶瓷马克杯",
+    "tote": "亚麻托特包",
+    "notebook": "点阵笔记本"
+  },
+  "summary": {
+    "subtotal": "小计",
+    "shipping": "运费",
+    "free": "免运费",
+    "total": "合计",
+    "arrives_other": "{{count}} 天内送达"
+  },
+  "promo": {
+    "placeholder": "优惠码"
+  },
+  "checkout": "去结算",
+  "footer": "价格已含税。<1>退货政策</1>"
+}

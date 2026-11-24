@@ -1,0 +1,27 @@
+name: test
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: The finished demo passes, the first pass fails
+        shell: bash
+        run: |
+          python skills/i18n-anything/scripts/i18n_check.py examples/shop
+          ! python skills/i18n-anything/scripts/i18n_check.py examples/first-pass > /dev/null
