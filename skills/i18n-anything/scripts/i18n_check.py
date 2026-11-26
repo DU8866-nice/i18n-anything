@@ -28,7 +28,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import catalogs as C  # noqa: E402
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 
 @dataclass

@@ -19,7 +19,7 @@ import os
 import re
 import sys
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 SKIP_DIRS = {".git", "node_modules", "dist", "build", ".next", ".nuxt", ".svelte-kit", "vendor", "Pods", ".venv",
              "venv", "__pycache__", "target", ".gradle", "coverage", ".turbo", "out",

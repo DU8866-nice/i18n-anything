@@ -89,6 +89,26 @@ class Placeholders(unittest.TestCase):
         self.assertTrue(self.same("Hi {{name}}", "Hallo {{ name }}"))
         self.assertTrue(self.same("Open $COUNT$ tabs", "Abrir $count$ pestañas"))
         self.assertTrue(self.same("100%% done", "100%% fertig"))
+        # Go's explicit argument index, as in SiYuan's kernel messages
+        self.assertTrue(self.same("[%d/%d] Created [%d] indexes [%s]", "[%[1]d/%[2]d] [%[4]s] के [%[3]d] इंडेक्स"))
+
+    def test_percent_signs_are_not_printf(self):
+        # Found as false alarms in Plane, AFFiNE and SiYuan: a percentage followed by a word
+        for src, tgt in [
+            ("Get 80% of your admin time back.", "Gewinnen Sie 80% Ihrer Zeit zurück."),
+            ("{{amount}}% off", "{{amount}}% de descuento"),
+            ("Saving {{discount}}%", "{{discount}}% sparen"),
+            ("reduce the file size by about 30%", "réduire la taille d'environ 30 % et de 50 %"),
+            ("up to 50% of history", "jusqu'à 50 % d'historique"),
+            ("such as %date:yyyy-MM-dd% or %Empty Latent Image.width% to include values",
+             "wie %date:yyyy-MM-dd% oder %Empty Latent Image.width% enthalten"),
+            ("90% line", "90%-Linie"),
+            ("Used {{percent}}% of this window", "Bu pencerenin {{percent}}%'i kullanıldı"),
+        ]:
+            self.assertTrue(self.same(src, tgt), (src, tgt))
+        self.assertEqual(C.placeholders("Get 80% of it"), C.placeholders("Get it"))
+        # a real space-flag token still counts
+        self.assertFalse(self.same("Total: % d", "Total:"))
 
     def test_differences(self):
         self.assertFalse(self.same("Hi {{name}}", "Hallo {{nom}}"))

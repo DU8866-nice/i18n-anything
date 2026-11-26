@@ -139,7 +139,34 @@ class Catalog:
 I18NEXT_VAR = re.compile(r"\{\{-?\s*([\w.]+)\s*(?:,[^}]*)?\}\}")
 RUBY_VAR = re.compile(r"%\{(\w+)\}")
 PY_VAR = re.compile(r"%\((\w+)\)[-#0 +]*\d*(?:\.\d+)?[sdifrx]")
-PRINTF = re.compile(r"%(?:(\d+)\$)?[-#0 +']*\d*(?:\.\d+)?(?:hh|h|ll|l|L|z|j|t)?([sdifuxXoeEgGcp@])")
+# %s, %1$s (POSIX positional) and %[1]s (Go explicit index) all name an argument
+PRINTF = re.compile(r"%(?:(\d+)\$)?([-#0 +']*)\d*(?:\.\d+)?(?:\[(\d+)\])?(hh|h|ll|l|L|z|j|t)?([sdifuxXoeEgGcp@])")
+
+
+def _is_percent_sign(text: str, m: "re.Match") -> bool:
+    """A literal percent sign that only looks like a printf token: '80% of' (% o),
+    '30 % en' (% e), 'width% to' (% to), '90%-Linie' (%-Li), "%{{percent}}'i" (%'i).
+
+    Real tokens with these flags are rare in UI strings, while a percentage followed by
+    a word is common in every language. Plain %s, %d, %1$s are never skipped."""
+    flags, length = m.group(2), m.group(4)
+    if not flags:
+        return False
+    if "'" in flags:
+        return True
+    before = text[:m.start()].rstrip()
+    after = text[m.end():m.end() + 1]
+    if before[-1:].isdigit() or (length and ("-" in flags or " " in flags)):
+        return True
+    return " " in flags and (after.isalpha() or (after != "" and after in "'’"))
+
+
+def printf_tokens(text: str):
+    """Yield (position or None, conversion) for each printf token, skipping literal percent signs."""
+    for m in PRINTF.finditer(text):
+        if _is_percent_sign(text, m):
+            continue
+        yield (m.group(1) or m.group(3)), m.group(5)
 NESTING = re.compile(r"\$t\(([^)]*)\)")
 CHROME_VAR = re.compile(r"\$([A-Za-z_][A-Za-z0-9_]*)\$")
 TAG = re.compile(r"</?([A-Za-z][\w-]*|\d+)(?:\s[^<>]*)?/?>")
@@ -225,13 +252,11 @@ def placeholders(text: str) -> Counter:
     stripped = stripped.replace("%%", " ")
     # %s and %1$s are the same argument: number the plain ones in order so they compare equal
     n = 0
-    for m in PRINTF.finditer(stripped):
-        if m.group(1):
-            pos = m.group(1)
-        else:
+    for pos, conv in printf_tokens(stripped):
+        if not pos:
             n += 1
             pos = str(n)
-        out[f"%{pos}${'d' if m.group(2) in 'iu' else m.group(2)}"] += 1
+        out[f"%{pos}${'d' if conv in 'iu' else conv}"] += 1
     for m in CHROME_VAR.finditer(text):
         out[f"${m.group(1).upper()}$"] += 1
     for m in NESTING.finditer(text):
@@ -249,7 +274,8 @@ def strip_markup(text: str) -> str:
             text = " ".join(branches.values())
     for rx in (I18NEXT_VAR, RUBY_VAR, PY_VAR, NESTING, TAG, BRACE_ARG, CHROME_VAR):
         text = rx.sub(" ", text)
-    return PRINTF.sub(" ", text.replace("%%", " "))
+    text = text.replace("%%", " ")
+    return PRINTF.sub(lambda m: m.group(0) if _is_percent_sign(text, m) else " ", text)
 
 
 SCRIPTS = {
